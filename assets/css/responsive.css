@@ -1,0 +1,107 @@
+/* Mobiles Devices */
+@media only screen and (max-width: 480px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .main .services, .main .news, .main .contact {
+        padding: 24px 12px;
+    }
+
+    .main .sectionContent {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .main .sectionTitle {
+        font-size: 38px;
+    }
+
+    .main .sectionSubTitle {
+        font-size: 24px;
+    }
+
+    .main .sectionText {
+        font-size: 18px;
+    }
+
+    /* ========== Header ========== */
+    .nav {
+        width: 100%;
+        height: 100vh;
+        padding: 25px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        opacity: 0;
+    }
+
+    .nav img {
+        margin-bottom: 100px;
+    }
+
+    .nav ul {
+        transform: none;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 125px;
+    }
+
+    .nav .dateTime {
+        width: 100%;
+        /* justify-self: center; */
+    }
+    /* ========== End Header ========== */
+
+    /* ========== Main Content ========== */
+    /* ========== Hero ========== */
+    .main .hero {
+        align-items: flex-start;
+    }
+
+    .main .hero .heroImg {
+        height: 100%;
+        width: unset;
+        left: -165%;
+    }
+
+    .main .hero .heroContent {
+        width: 90%;
+        margin: 125px auto 0;
+        transform: none;
+    }
+
+    .main .hero .heroContent img {
+        width: 200px;
+    }
+
+    .main .hero .heroContent .heroMainText {
+        font-size: 32px;
+    }
+
+    .main .hero .heroContent .heroSecondText {
+        font-size: 18px;
+    }
+    /* ========== End Hero ========== */
+    
+    /* ========== About ========== */
+    .main .about .aboutTitle {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .main .about .aboutText {
+        width: 90%;
+        margin: 0 auto 24px;
+        font-size: 16px;
+    }
+    /* ========== End About ========== */
+    
+    /* ========== Services ========== */
+    .swiper {
+        width: 368px;
+        height: 400px;
+    }
+}
