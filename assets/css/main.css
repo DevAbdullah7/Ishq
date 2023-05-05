@@ -62,6 +62,7 @@
 .main .sectionText {
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: justify;
 }
 
 .btn {
@@ -205,7 +206,7 @@ html::-webkit-scrollbar-thumb {
     content: '';
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, var(--mainColor) -25%, transparent);
+    background: linear-gradient(to bottom, var(--mainColor) -75%, transparent);
     z-index: -1;
 }
 
@@ -284,7 +285,7 @@ html::-webkit-scrollbar-thumb {
     width: 100%;
     height: fit-content;
     text-align: center;
-    padding: 75px 0 25px;
+    padding: 75px 350px 25px;
 }
 
 .main .about .aboutTitle {
@@ -295,6 +296,7 @@ html::-webkit-scrollbar-thumb {
 .main .about .aboutText {
     font-size: 24px;
     margin-bottom: 64px;
+    text-align: justify;
 }
 
 .main .about .aboutWriter {
@@ -325,6 +327,10 @@ html::-webkit-scrollbar-thumb {
 
 .main .services .sectionContent {
     
+}
+
+.main .services .column1 {
+    width: 45%;
 }
 
 .main .services .column2 {
@@ -423,6 +429,10 @@ body.imgShown::after {
 /* ========== News ========== */
 .main .news {
     background: #F9F2D9;
+}
+
+.main .news .newsContent {
+    width: 48%;
 }
 /* ========== End News ========== */
 

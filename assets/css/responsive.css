@@ -6,11 +6,11 @@
     }
 
     .main .services, .main .news {
-        padding: 64px 12px 24px;
+        padding: 64px 16px 24px;
     }
 
     .main .contact {
-        padding: 24px 12px;
+        padding: 24px 16px;
     }
 
     .main .sectionContent {
@@ -21,14 +21,17 @@
 
     .main .sectionTitle {
         font-size: 38px;
+        margin-bottom: 32px;
     }
 
     .main .sectionSubTitle {
         font-size: 24px;
+        font-weight: normal;
     }
 
     .main .sectionText {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 24px;
     }
 
     /* ========== Header ========== */
@@ -109,12 +112,15 @@
     /* ========== Hero ========== */
     .main .hero {
         align-items: flex-start;
+        min-height: unset;
+        max-height: unset;
+        height: 100vh;
     }
 
     .main .hero .heroImg {
         height: 100%;
         width: unset;
-        left: -165%;
+        left: -90%;
     }
 
     .main .hero .heroContent {
@@ -134,12 +140,20 @@
     .main .hero .heroContent .heroSecondText {
         font-size: 18px;
     }
+
+    .main .hero .pattern {
+        display: none;
+    }
     /* ========== End Hero ========== */
     
     /* ========== About ========== */
+    .main .about {
+        padding: 75px 0px 25px;
+    }
     .main .about .aboutTitle {
         font-size: 32px;
         margin-bottom: 12px;
+        font-weight: normal;
     }
 
     .main .about .aboutText {
@@ -150,6 +164,10 @@
     /* ========== End About ========== */
     
     /* ========== Services ========== */
+    .main .services .column1 {
+        width: 100%;
+    }
+
     .main .services .column2 {
         width: 100%;
     }
@@ -157,33 +175,39 @@
         width: 100%;
         height: fit-content;
     }
-
+    
     /* for ios devices */
     @supports (-webkit-touch-callout: none) {
         .swiper {
             height: 80vh; 
         }
     }
-
+    
     .swiper-slide {
         margin: auto;
     }
-
+    
     .imagesPreview.active {
         width: 100vw;
         height: fit-content;
         left: -12px;
         transform: none;
     }
-
+    
     .imagesPreview img {
         width: 100%;
     }
-
+    
     .imagesPreview .close {
         top: 10px;
         right: 10px;
         border-radius: 50%;
         border: 3px solid var(--shiftColor);
+    }
+    /* ========== End Services ========== */
+    
+    /* ========== News ========== */
+    .main .news .newsContent {
+        width: 100%;
     }
 }
