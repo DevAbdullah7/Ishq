@@ -31,3 +31,16 @@ if (dateTime.getMinutes() < 10) {
 timeNow.innerHTML += `
     <p class="time"><span class="hours">${String(hourNow < 10 & hourNow > 0 ? `0${hourNow}` : hourNow.toString())}</span>:<span class="mints">${String(mintNow < 10 & mintNow > 0 ? `0${mintNow}` : mintNow.toString())}</span> <span class="amPm">${amPm}</span></p>
 `;
+
+let menuBtn = document.querySelector('.nav .navMenu')
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        document.querySelector('.nav').classList.toggle('active')
+    })
+
+    document.querySelectorAll('.nav ul li a').forEach((item) => {
+        item.addEventListener('click', () => {
+            document.querySelector('.nav').classList.remove('active')
+        })
+    })
+}

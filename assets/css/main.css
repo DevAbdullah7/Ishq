@@ -120,16 +120,29 @@ html::-webkit-scrollbar-thumb {
     background: var(--headerColor);
     box-shadow: 0 0 15px rgba(0, 0, 0, .5);
     z-index: 10000;
+    transition: .5s all ease-in-out;
+}
+
+.nav .controlers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav img {
     width: 75px;
 }
 
+.nav .navMenu {
+    display: none;
+}
+
 .nav ul {
     display: flex;
     gap: 50px;
     transform: translateX(-50px);
+    transition: .5s all ease-in-out;
 }
 
 .nav ul li {
@@ -154,6 +167,7 @@ html::-webkit-scrollbar-thumb {
 
 .nav .dateTime {
     gap: 16px;
+    transition: .5s all ease-in-out;
 }
 
 .nav .dateTime img {
@@ -306,6 +320,13 @@ html::-webkit-scrollbar-thumb {
 
 .main .services .sectionContent {
     
+}
+
+.main .services .column2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Swiper Stylling */
