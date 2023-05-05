@@ -32,7 +32,7 @@ timeNow.innerHTML += `
     <p class="time"><span class="hours">${String(hourNow < 10 & hourNow > 0 ? `0${hourNow}` : hourNow.toString())}</span>:<span class="mints">${String(mintNow < 10 & mintNow > 0 ? `0${mintNow}` : mintNow.toString())}</span> <span class="amPm">${amPm}</span></p>
 `;
 
-let menuBtn = document.querySelector('.nav .navMenu')
+let menuBtn = document.querySelector('.nav .headerControling')
 if (menuBtn) {
     menuBtn.addEventListener('click', () => {
         document.querySelector('.nav').classList.toggle('active')
@@ -44,3 +44,19 @@ if (menuBtn) {
         })
     })
 }
+
+// let imgShowenBtn = document.querySelector('.swiper img.imgShowen')
+// let imgHiddenBtn = document.querySelector('.imagesPreview .close')
+// if (imgShowenBtn) {
+//     imgShowenBtn.addEventListener('click', () => {
+//         document.querySelector('.imagesPreview').classList.add('active')
+//         document.querySelector('.imagesPreview .main').src = `${document.querySelector('.swiper .swiper-slide-active').firstChild.src}`
+//         document.querySelector('body').classList.add('imgShown')
+//     })
+// }
+// if (imgHiddenBtn) {
+// }
+// imgHiddenBtn.addEventListener('click', () => {
+//     document.querySelector('.imagesPreview').classList.remove('active')
+//     document.querySelector('body').classList.remove('imgShown')
+// })

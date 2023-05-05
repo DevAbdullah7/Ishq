@@ -91,6 +91,7 @@ body {
     min-height: 100vh;
     background: var(--mainColor);
     direction: rtl;
+    transition: .5s all ease-in-out;
 }
 
 html {
@@ -124,7 +125,6 @@ html::-webkit-scrollbar-thumb {
 }
 
 .nav .controlers {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,7 +134,12 @@ html::-webkit-scrollbar-thumb {
     width: 75px;
 }
 
-.nav .navMenu {
+.nav .headerControling {
+    display: none;
+}
+
+.nav .navMenu,
+.nav .navClose {
     display: none;
 }
 
@@ -323,7 +328,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .main .services .column2 {
-    width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,6 +353,70 @@ html::-webkit-scrollbar-thumb {
 
 .swiper-pagination-bullet-active {
     background: var(--shiftColor) !important;
+}
+
+.swiper img.imgShowen {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    top: 10px;
+    right: 16px;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+.imagesPreview {
+    position: absolute;
+    width: 85vw;
+    height: fit-content;
+    top: 0;
+    left: 50%;
+    transform: translateX(250%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 5px solid var(--shiftColor);
+    background: var(--mainColor);
+    overflow: hidden;
+    z-index: -10000;
+    transition: .5s all ease-in-out;
+}
+
+.imagesPreview.active {
+    transform: translateX(-30%);
+    z-index: 10000;
+}
+
+.imagesPreview img {
+    
+}
+
+.imagesPreview .close {
+    position: absolute;
+    width: 50px;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid var(--shiftColor);
+    z-index: 10001;
+}
+body::after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 0%;
+    top: 0;
+    background: var(--mainColor);
+    transition: .5s all ease-in-out;
+    z-index: -10000;
+}
+body.imgShown::after {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 /* ========== End Services ========== */
 
