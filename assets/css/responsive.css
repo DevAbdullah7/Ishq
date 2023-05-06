@@ -1,5 +1,5 @@
-/* Mobiles Devices */
-@media only screen and (max-width: 480px) {
+/* Mobiles & Taplates Devices */
+@media only screen and (max-width: 868px) {
     html, body {
         width: 100%;
         overflow-x: hidden;
@@ -45,7 +45,7 @@
     }
 
     .nav.active {
-        height: 100vh;
+        height: 80vh;
         padding: 25px;
     }
 
@@ -84,7 +84,7 @@
     }
 
     .nav ul {
-        transform: translateX(150%);
+        transform: translateX(250%);
         flex-direction: column;
         gap: 25px;
         margin-bottom: 125px;
@@ -98,7 +98,7 @@
 
     .nav .dateTime {
         width: 100%;
-        transform: translateX(-100%);
+        transform: translateX(-150%);
         opacity: 0;
     }
 
@@ -111,10 +111,8 @@
     /* ========== Main Content ========== */
     /* ========== Hero ========== */
     .main .hero {
+        justify-content: center;
         align-items: flex-start;
-        min-height: unset;
-        max-height: unset;
-        height: 100vh;
     }
 
     .main .hero .heroImg {
@@ -148,7 +146,7 @@
     
     /* ========== About ========== */
     .main .about {
-        padding: 75px 0px 25px;
+        padding: 75px 16px 25px;
     }
     .main .about .aboutTitle {
         font-size: 32px;
@@ -157,8 +155,8 @@
     }
 
     .main .about .aboutText {
-        width: 90%;
-        margin: 0 auto 24px;
+        width: 100%;
+        margin-bottom: 24px;
         font-size: 16px;
     }
     /* ========== End About ========== */
@@ -170,6 +168,9 @@
 
     .main .services .column2 {
         width: 100%;
+    }
+    .main .services .column1 .forDesktop {
+        display: none;
     }
     .swiper {
         width: 100%;
@@ -210,4 +211,114 @@
     .main .news .newsContent {
         width: 100%;
     }
+}
+
+/* Taplate Devices */
+@media only screen and (868px < width < 1880px) {
+    .nav {
+        padding: 0 12px;
+    }
+    .nav ul {
+        transform: unset;
+    }
+    .main .hero {
+        /* align-items: flex-start; */
+        padding: 50px 0 0;
+    }
+    .main .hero .heroContent {
+        transform: translateX(100px);
+    }
+    .main .hero .pattern {
+        display: none;
+    }
+    .main .hero .heroImg {
+        height: 100%;
+    }
+    .main .about {
+        padding: 75px 50px 25px;
+    }
+    .main .services, .main .news, .main .contact {
+        padding: 70px 50px;
+    }
+    .main .services .column1 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main .services .servicesTitle {
+        width: 100%;
+    }
+
+    .main .services .servicesText {
+        width: 48%;
+        margin-left: 20%;
+    }
+
+    .main .services .servicesText.socendText {
+        width: 100%;
+    }
+
+    .main .services .column1 .forDesktop {
+        display: block;
+        width: 48%;
+        margin-left: 4%;
+    }
+
+    .main .services .column1 .forSmallDevices {
+        display: none;
+    }
+
+    .swiper {
+        transform: translateY(-105px);
+        width: 48%;
+    }
+}
+
+/* Desktop Devices */
+@media only screen and (min-width: 1880px) {
+    .main .services {
+        padding: 70px 350px 0;
+    }
+
+    .main .services .column1 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main .services .servicesTitle {
+        width: 100%;
+    }
+
+    .main .services .servicesText {
+        width: 48%;
+        margin-left: 20%;
+    }
+
+    .main .services .servicesText.socendText {
+        width: 100%;
+    }
+
+    .main .services .servicesText.socendText,
+    .main .services .column1 .btn {
+        /* transform: translateY(-852px); */
+    }
+
+    .main .services .column1 .forDesktop {
+        display: block;
+        width: 48%;
+        margin-left: 4%;
+    }
+
+    .main .services .column1 .forSmallDevices {
+        display: none;
+    }
+
+    .swiper {
+        transform: translateY(-105px);
+        width: 48%;
+    }
+
+
 }
